@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.holder {
+    width: 100%;
+    height: 204px;
+    border: 2px solid black;
+    margin: 0 200px;
+    border: 2px solid black;
+    border-radius: 102px 102px;
+    overflow: hidden;
+}
+.test {
+    width: 200px;
+    height: 200px;
+    background: #555555;
+    border-radius: 100%;
+    animation-name: infinity-ball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+
+    /*animation shorthand property */
+    /*animation-duration: animation-name animation-duration animation-delay animation-iteration-count animation-timing-function animation-fill-mode animation-play-state;*/
+
+    /*animation properties: */
+    /*animation-name: name for identify an animation for keyframes;*/
+    /*animation-delay: s or sm;*/
+    /*animation-duration: s or sm;*/
+    /*animation-direction: normal alternate reverse alternate-reverse;*/
+    /*animation-iteration-count: number | infinite;*/
+    /*animation-timing-function: ease ease-in ease-out ease-in-out linear;*/
+    /*animation-fill-mode: none forwards backwards both;*/
+    /*animation-play-state: paused | running;*/
+
+    /*@keyframes animation-name {*/
+    /*    from or 0%{}*/
+    /*    to or 100% {}*/
+    /*}*/
+}
+@keyframes infinity-ball {
+    from {
+        transform: translateX(-100%);
+        background: blue;
+    }
+    50% {
+        background: yellow;
+    }
+    to {
+        transform: translateX(500%);
+        background: green;
+    }
+}
+
+.test2 {
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    background: #0a2a43;
+    animation-name: test2;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+@keyframes test2 {
+    0% {
+        background: green;
+    }
+    25% {
+        background: red;
+    }
+    50% {
+        background: yellow;
+    }
+    75% {
+        background: gray;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+.heart {
+    width: 200px;
+    height: auto;
+    animation-name: heart;
+    animation-duration: .25s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    margin: 100px;
+}
+
+@keyframes heart {
+    to {
+        transform: scale(1.4);
+    }
+}

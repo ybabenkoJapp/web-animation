@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    /*width: 20%;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+.test {
+    height: 100px;
+    width: 100px;
+    background: green;
+
+    /*transition shorthand property*/
+    /*transition: transition-property transition-duration transition-delay transition-timing-function;*/
+
+    /*transition properties*/
+
+    /*transition-property: all or css property;*/
+    /*transition-duration: s or ms;*/
+    /*transition-delay:  s or ms;*/
+    /*transition-timing-function: ease ease-in ease-out ease-in-out linear;*/
+
+    /*transition min setup css property and duration*/
+    /*transition: width 1s;*/
+
+    /*transition-property: width;*/
+    /*transition-duration: 1s;*/
+
+    /*transition multiple properties*/
+    transition-property: width, height, background;
+    transition-duration: 1s, 2s, 3s;
+}
+
+.animate {
+    width: 150px;
+    height: 250px;
+    background: yellow;
+}
+
+.test:hover {
+    width: 150px;
+    height: 250px;
+    background: blueviolet;
+}
+
+.smile {
+    width: 150px;
+    height: auto;
+    transition: transform 3s .2s linear, width 2s ease-in-out;
+}
+.smile:hover {
+    transform: rotate(360deg);
+    width: 300px;
+}
+
+.smile.active {
+    transform: rotate(180deg);
+}
+
+.error {
+    width: 250px;
+    height: auto;
+    transform: scale(0.8);
+}
+
+.error:hover {
+    transition: transform .8s ease-out;
+    transform: scale(0.6) rotate(-360deg);
+}
