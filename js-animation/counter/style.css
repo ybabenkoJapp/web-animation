@@ -1,0 +1,68 @@
+:root {
+    --inc: 0.375;
+    --delay: 0;
+}
+body {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.counters {
+    display: flex;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.counter {
+    letter-spacing: 4px;
+    line-height: 1;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    height: 50px;
+    font-size: 50px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+.counter > span {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform 2s ease;
+      transform: translateY(0);
+      line-height: 1;
+}
+.counter > span > span {
+    flex: 0 0 100%;
+    height: 100%;
+}
+.counter:nth-child(1) {
+    color: #EF8354;
+}
+.counter:nth-child(2) {
+    color: #0EB1D2;
+}
+.counter:nth-child(3) {
+    color: #2D3142;
+}
+.counter:nth-child(4) {
+    color: #698F3F;
+}
+.counter:nth-child(1) > span {
+    transition-delay: calc(var(--delay) + 100ms + var(--inc));
+}
+.counter:nth-child(2) > span {
+    transition-delay: calc(var(--delay) + 200ms + var(--inc));
+}
+.counter:nth-child(3) > span {
+    transition-delay: calc(var(--delay) + 300ms + var(--inc));
+}
+.counter:nth-child(4) > span {
+    transition-delay: calc(var(--delay) + 400ms + var(--inc));
+}

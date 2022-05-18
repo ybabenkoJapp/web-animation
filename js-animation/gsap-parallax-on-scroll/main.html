@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ironman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="bg.jpg" alt="background" id="bg">
+        <img src="moon.png" alt="background" id="moon">
+        <img src="cloud1.png" alt="background" id="cloud1">
+        <img src="cloud2.png" alt="background" id="cloud2">
+        <img src="jet.png" alt="background" id="jet">
+        <img src="ironman.png" alt="background" id="ironman">
+    </section>
+<section class="sec">
+    <div class="content">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ab accusantium, at doloremque eius esse est eum ex explicabo fugit minima
+            modi neque nobis quas quasi quibusdam rem repellat ullam ut! A ab aliquid
+            atque cupiditate ducimus est exercitationem expedita illo, iusto libero
+            magni necessitatibus nihil nulla provident qui repudiandae sed!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ab accusantium, at doloremque eius esse est eum ex explicabo fugit minima
+            modi neque nobis quas quasi quibusdam rem repellat ullam ut! A ab aliquid
+            atque cupiditate ducimus est exercitationem expedita illo, iusto libero
+            magni necessitatibus nihil nulla provident qui repudiandae sed!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ab accusantium, at doloremque eius esse est eum ex explicabo fugit minima
+            modi neque nobis quas quasi quibusdam rem repellat ullam ut! A ab aliquid
+            atque cupiditate ducimus est exercitationem expedita illo, iusto libero
+            magni necessitatibus nihil nulla provident qui repudiandae sed!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ab accusantium, at doloremque eius esse est eum ex explicabo fugit minima
+            modi neque nobis quas quasi quibusdam rem repellat ullam ut! A ab aliquid
+            atque cupiditate ducimus est exercitationem expedita illo, iusto libero
+            magni necessitatibus nihil nulla provident qui repudiandae sed!
+        </p>
+    </div>
+</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script>
+    gsap.to("#bg", {
+        scrollTrigger: {
+            scrub: true
+        },
+        y: 200,
+        scale: 1.5
+    })
+    gsap.to("#moon", {
+        scrollTrigger: {
+            scrub: true
+        },
+        x: -400,
+        scale: 2
+    })
+    gsap.to("#cloud1", {
+        scrollTrigger: {
+            scrub: true
+        },
+        x: -300,
+    })
+    gsap.to("#cloud2", {
+        scrollTrigger: {
+            scrub: true
+        },
+        x: 300,
+    })
+    gsap.to("#jet", {
+        scrollTrigger: {
+            scrub: true
+        },
+        x: 1000,
+        y: 200,
+        scale: 4
+    })
+    gsap.to("#ironman", {
+        scrollTrigger: {
+            scrub: true
+        },
+        x: 0,
+        y: -1800,
+        scale: 1,
+        rotate: -50,
+    })
+</script>
+</body>
+</html>

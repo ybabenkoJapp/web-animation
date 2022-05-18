@@ -4,18 +4,17 @@
     box-sizing: border-box;
 }
 .container {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 .holder {
     width: 100%;
     height: 204px;
     border: 2px solid black;
     margin: 0 200px;
-    border: 2px solid black;
     border-radius: 102px 102px;
     overflow: hidden;
 }
@@ -56,7 +55,7 @@
         background: yellow;
     }
     to {
-        transform: translateX(500%);
+        transform: translateX(800%);
         background: green;
     }
 }
@@ -103,5 +102,47 @@
 @keyframes heart {
     to {
         transform: scale(1.4);
+    }
+}
+
+/* Box direction animation */
+
+.directions {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 450px;
+    top: -220px;
+}
+.directions-item {
+    width: 100px;
+    height: 100px;
+    background: brown;
+    position: absolute;
+    animation: box 4s infinite ease-in-out;
+    /*animation-direction: alternate;*/
+    /*animation-direction: reverse;*/
+    animation-direction: alternate-reverse;
+}
+@keyframes box {
+    0%   {
+        left:200px;
+        top:0;
+    }
+    25%  {
+        left:400px;
+        top:0;
+    }
+    50%  {
+        left:400px;
+        top:350px;
+    }
+    75%  {
+        left:200px;
+        top:350px;
+    }
+    100% {
+        left:200px;
+        top:0;
     }
 }

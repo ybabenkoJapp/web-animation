@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script-based animation using requestAnimationFram</title>
+</head>
+<style>
+    div {
+        position: absolute; left: 10px; padding: 50px;
+        background: crimson; color: white
+    }
+    .train-conteiner {
+        margin: 100px;
+        background: transparent;
+        position: relative;
+    }
+    .train {
+        position: absolute;
+        top: 100px;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<body>
+<button onclick="start()">Click me to start!</button>
+<button onclick="stop()">Click me to stop!</button>
+<div id="animated">Hello there.</div>
+
+<div class="train-conteiner">
+    <img onclick="handleClick()" src="train.png" alt="train" class="train">
+</div>
+<script>
+    var requestId = 0;
+    const train = document.querySelector('.train');
+
+    function animate(time) {
+        document.getElementById("animated").style.left =
+            (time - animationStartTime) % 2000 / 4 + "px";
+        requestId = window.requestAnimationFrame(animate);
+    }
+    function start() {
+        animationStartTime = window.performance.now();
+        requestId = window.requestAnimationFrame(animate);
+    }
+    function stop() {
+        if (requestId)
+            window.cancelAnimationFrame(requestId);
+        requestId = 0;
+    }
+
+    function handleClick() {
+        let start = Date.now();
+        let timer = setInterval(function () {
+            let timePassed = Date.now() - start;
+            train.style.left = timePassed / 5 + 'px';
+
+            if (timePassed > 2000) clearInterval(timer);
+        }, 20)
+    }
+</script>
+</body>
+</html>

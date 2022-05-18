@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animate method</title>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .newspaper {
+            padding: .5rem;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="newspaper">Spinning newspaper<br>causes dizziness</div>
+<script>
+    const newspaperSpinning = [
+        { transform: 'rotate(0) scale(1)' },
+        { transform: 'rotate(360deg) scale(0)' }
+    ];
+
+    const newspaperTiming = {
+        duration: 2000,
+        iterations: 1,
+    }
+
+    const newspaper = document.querySelector(".newspaper");
+
+    newspaper.addEventListener('click', () => {
+        newspaper.animate(newspaperSpinning, newspaperTiming);
+    });
+</script>
+</body>
+</html>
